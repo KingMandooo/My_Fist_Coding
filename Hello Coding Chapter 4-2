@@ -1,0 +1,30 @@
+using System;
+
+namespace Hello Coding Chapter 4-2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = 2;
+            number = number * 3;
+            number = number - 4;
+            number = number % 2;
+
+            Console.WriteLine(number);
+
+            int pocket = 10;
+            int AramPocket = pocket;
+            AramPocket = pocket / 2;
+            AramPocket = AramPocket - 1;
+            int UramPocket = pocket - AramPocket;
+            UramPocket = UramPocket / 2;
+            UramPocket = UramPocket + 2;
+            pocket = pocket - (AramPocket + UramPocket);
+
+            Console.WriteLine(AramPocket);
+            Console.WriteLine(UramPocket);
+            Console.WriteLine(pocket);
+        }
+    }
+}
