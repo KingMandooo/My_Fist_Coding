@@ -1,6 +1,6 @@
             int pocket = 10;
             int AramPocket = pocket;
-            AramPocket = pocket / 2;             <--pocket은 그대로 10인데 같이 변하는줄암. 값: 5. 난 밑에 값이 5 - 1로 출력돼서 4로 나올줄암.
+            AramPocket = pocket / 2;             <--pocket은 그대로 10인데 같이 변하는줄암. 값: 5. 난 밑에 pocket 값이 5 - 1로 출력돼서 4로 나올줄암.
             AramPocket = pocket - 1;              <--pocket은 그대로 10인데 같이 변하는줄암.값: 9. 그래서 값이 이상하게 나옴. 이제 암. 됐음. 디버깅하면서 알아냄 굳.
             int UramPocket = pocket - AramPocket;
             UramPocket = UramPocket / 2;
