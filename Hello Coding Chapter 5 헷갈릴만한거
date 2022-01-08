@@ -33,7 +33,7 @@ namespace Calculator                                                            
         static void Main(string[] args)
         {
             Console.WriteLine("첫 번째 숫자를 입력하세요.");
-            double number1 = double.Parse(Console.ReadLine());
+            double number1 = double.Parse(Console.ReadLine());                     <-- double.Parse() 함수는 문자열형을 실수형으로 바꾸우우우우움
             Console.WriteLine("두 번째 숫자를 입력하세요.");
             double number2 = double.Parse(Console.ReadLine());
 
