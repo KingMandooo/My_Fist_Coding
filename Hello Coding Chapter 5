@@ -1,0 +1,41 @@
+using System;
+
+namespace test5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("첫 번째 숫자: ");
+            double number1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("두 번째 숫자: ");
+            double number2 = double.Parse(Console.ReadLine());
+ 
+            Console.WriteLine("더하기: ");
+            Console.WriteLine(number1 + number2);
+            Console.WriteLine("빼기: ");
+            Console.WriteLine(number1 - number2);
+            Console.WriteLine("곱하기: ");
+            Console.WriteLine(number1 * number2);
+            Console.WriteLine("나누기: ");
+            Console.WriteLine(number1 / number2);
+            
+            // 밑에는 다른 문제.---------------------------------------------------------------------------------------------------------
+
+            Console.WriteLine("주머니에는 동전이 10개 들어 있습니다.");
+            
+            Console.WriteLine("어머니는 몇 개의 동전을 주머니에 넣었나요?");
+            int motherCoin = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("아람이는 몇 개의 동전을 꺼냈나요?");
+            int aramCoin = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("우람이는 몇 개의 동전을 꺼냈나요?");
+            int uramCoin = int.Parse(Console.ReadLine());
+            
+            Console.Write("주머니에 남아 있는 동전의 개수는 ");
+            Console.Write((10 + motherCoin)-(aramCoin + uramCoin));
+            Console.WriteLine("개입니다. ");
+        }
+    }
+}
