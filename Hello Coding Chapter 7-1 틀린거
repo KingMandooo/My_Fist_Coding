@@ -1,0 +1,21 @@
+using System;
+
+namespace test_7_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double[] weight = new double[3];
+
+            Console.WriteLine("첫 번째 무게: ");
+            weight[0] = double.Parse(Console.ReadLine());          <---  double weight[0] = double.Parse(Console.ReadLine()); 이라고 했었음.
+                                                                         이러면 안됨. 왜 안되지,,?? 이미 위치와 변수의 종류가 지정되어서??
+           Console.WriteLine("두 번째 무게: ");                          
+            weight[1] = double.Parse(Console.ReadLine());
+            
+            Console.WriteLine("세 번째 무게: ");
+            weight[2] = double.Parse(Console.ReadLine());
+        }
+    }
+}
