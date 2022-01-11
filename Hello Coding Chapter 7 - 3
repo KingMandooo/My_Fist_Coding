@@ -1,0 +1,57 @@
+using System;
+
+namespace test_7_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string [] subjectName = { "국어", "수학", "영어", "과학", "사회" };
+            double [] subjectScore = new double [5];
+            
+            Console.WriteLine (subjectName[0]);
+            subjectScore[0] = double.Parse(Console.ReadLine());
+            Console.WriteLine(subjectName[1]);
+            subjectScore[1] = double.Parse(Console.ReadLine());
+            Console.WriteLine(subjectName[2]);
+            subjectScore[2] = double.Parse(Console.ReadLine());
+            Console.WriteLine(subjectName[3]);
+            subjectScore[3] = double.Parse(Console.ReadLine());
+            Console.WriteLine(subjectName[4]);
+            subjectScore[4] = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("총합: ");
+            Console.WriteLine(subjectScore[0] + subjectScore[1] + subjectScore[2] + subjectScore[3] + subjectScore[4]);       < --- 이 부분이 살짝 아쉬운 것 같다. 나머지는 비슷한듯
+            Console.WriteLine("평균: ");
+            Console.WriteLine((subjectScore[0] + subjectScore[1] + subjectScore[2] + subjectScore[3] + subjectScore[4])/5);
+
+            //--------------------------------------------------------------------------------------------------------------------------- 밑에는 심화 문제 풀이 과정! 비교 ㄱ
+
+            int courseCount = 5;
+            double[] scores = new double [courseCount];
+
+            Console.WriteLine("국어 성적을 입력하세요.");
+            scores[0] = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("수학 성적을 입력하세요.");
+            scores[1] = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("영어 성적을 입력하세요.");
+            scores[2] = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("과학 성적을 입력하세요.");
+            scores[3] = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("사회 성적을 입력하세요.");
+            scores[4] = double.Parse(Console.ReadLine());
+            
+            double totalScore = scores[0] + scores[1] + scores[2] + scores[3] + scores[4];
+
+            Console.WriteLine("총점: ");
+            Console.WriteLine(totalScore);
+
+            Console.WriteLine("평균: ");
+            Console.WriteLine(totalScore / courseCount);
+        }
+    }
+}
