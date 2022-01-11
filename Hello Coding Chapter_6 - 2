@@ -6,25 +6,25 @@ namespace Hello Coding Chapter_6
     {
         static void Main(string[] args)
         { 
-            int userInpput = int.Parse(Console.ReadLine());
+            int userInput = int.Parse(Console.ReadLine());
 
-            if (userInpput > 20 && userInpput % 3 == 0)
+            if (userInput > 20 && userInpput % 3 == 0)
             {
                 Console.WriteLine("20보다 큰 3의 배수입니다.");
             }
-            else if (userInpput < 20  && userInpput % 3 != 0)
+            else if (userInput < 20  && userInpput % 3 != 0)
             {
                 Console.WriteLine("20보다 작고 3의 배수가 아닙니다.");
             }
-            else if (userInpput < 20 && userInpput % 3 == 0)
+            else if (userInput < 20 && userInpput % 3 == 0)
             {
                 Console.WriteLine("20보다 작고 3의 배수입니다.");
             }
-            else if (userInpput > 20 && userInpput % 3 != 0)
+            else if (userInput > 20 && userInpput % 3 != 0)
             {
                 Console.WriteLine("20보다 크고 3의 배수가 아닙니다.");
             }
-            else if (userInpput == 20)
+            else if (userInput == 20)
             {
                 Console.WriteLine("20입니다.");
             }
