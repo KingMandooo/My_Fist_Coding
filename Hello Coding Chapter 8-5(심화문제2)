@@ -1,0 +1,40 @@
+using System;
+
+namespace test_8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("전체 학생수");
+            int studentCount = int.Parse(Console.ReadLine());
+            int [] students = new int[studentCount];
+            double [] korean = new double[studentCount];
+            double[] english = new double[studentCount];
+            double[] math = new double[studentCount];
+            int studentIndex = 0;
+
+            while (studentIndex < studentCount)
+            {
+                Console.Write(studentIndex + 1);
+                Console.WriteLine("번째 학생의 성적");
+                Console.WriteLine("국어 성적");
+                korean[studentIndex] = double.Parse(Console.ReadLine());
+                Console.WriteLine("영어성적");
+                english[studentIndex] = double.Parse(Console.ReadLine());
+                Console.WriteLine("수학성적");
+                math[studentIndex] = double.Parse(Console.ReadLine());
+
+                double score = korean[studentIndex] + korean[studentIndex] + math[studentIndex];
+                Console.WriteLine("총합");
+                Console.WriteLine(score);
+                Console.WriteLine("평균");
+                Console.WriteLine(score/3);
+
+                studentIndex = studentIndex + 1;
+            }
+            Console.WriteLine();
+            Console.WriteLine("입력이 끝났습니다.");
+        }
+    }
+}
