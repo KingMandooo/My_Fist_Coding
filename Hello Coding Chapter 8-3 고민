@@ -1,0 +1,24 @@
+using System;
+
+namespace test_8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string userInput = "";       <------ 이게 왜 필요한가 생각해봤는데, 변수에는 값을 설정해줘야하기 때문에 임의로 설정해논거같은 생각이듬.
+
+            while(true)
+            {
+                Console.WriteLine("끝내려면 끝하셈");
+                userInput = Console.ReadLine();
+                Console.WriteLine(userInput);
+
+                if (userInput == "끝")
+                {
+                    break;
+                }
+            }
+        }
+    }
+}
