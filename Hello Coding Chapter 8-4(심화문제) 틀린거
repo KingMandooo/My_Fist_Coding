@@ -12,6 +12,7 @@ namespace Hello_Coding_Chpater_8
             while (true)
             {
                 int passcodeCounts = 0;                       < -- 이 부분 미스 아래에 틀린 이유.
+                while (passcodeCounts < 6)
                 {
                     Console.Write(passcodeCounts);
                     Console.WriteLine("번째 숫자를 넣어주세요.");
