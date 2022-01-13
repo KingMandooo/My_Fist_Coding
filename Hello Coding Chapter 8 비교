@@ -1,0 +1,59 @@
+// 이게 내가 작성한거..............!!
+using System;
+
+namespace test_8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int subjectNumber = 0;
+            int[] scores = new int[5];
+          
+            while(true)
+            {
+                Console.Write(subjectNumber);
+                Console.WriteLine("번째 과목의 성적을 입력하세요.");
+                scores[subjectNumber] = int.Parse(Console.ReadLine());
+
+                subjectNumber = subjectNumber + 1;
+
+                if(subjectNumber == 5)
+                {
+                    break;
+                }
+            }
+            Console.Write("총점은 ");
+            Console.Write(scores[0] + scores[1] + scores[2] + scores[3] + scores[4]);
+            Console.WriteLine("입니다.");
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------
+//이게 답안지       ( 확실히 더 단순하기는 하다.)
+using System;
+
+namespace test_8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] scores = new int[5];
+            int index = 0;
+
+            while (index < 5)
+            {
+                Console.Write(index);
+                Console.WriteLine("번째 과목의 성적을 입력하세요.");
+                scores[index] = int.Parse(Console.ReadLine());
+
+                index = index + 1;
+            }
+            Console.Write("총점은 ");
+            Console.Write(scores[0] + scores[1] + scores[2] + scores[3] + scores[4]);
+            Console.WriteLine("입니다.");
+        }
+    }
+}
