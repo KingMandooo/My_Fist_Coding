@@ -16,7 +16,7 @@ namespace test_8
 
                 if (userInput == "끝")
                 {
-                    break;
+                    break;                  // 여기서 중괄호가 있고 없고의 차이가 뭘까? 중괄호 없어도 break;는 실행이 되던데...
                 }
             }
         }
