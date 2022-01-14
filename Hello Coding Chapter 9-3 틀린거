@@ -35,7 +35,7 @@ namespace StudentList_For
     {
         static void Main(string[] args)
         {
-            for(int i = 2; i <= 8; i = i + 2)           <--------- 이거였음.. 
+            for(int i = 2; i <= 8; i = i + 2)           <--------- 이거였음.. 개쉽네,, 그래도 끝까지 생각해낸게 굳.
             {
                 Console.Write(i);
                 Console.WriteLine("단");
