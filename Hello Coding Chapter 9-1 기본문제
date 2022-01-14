@@ -1,0 +1,29 @@
+using System;
+
+namespace test_9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("몇 명의 친구들에게 사과를 나눠줄까요?");
+            int friendCount = int.Parse(Console.ReadLine());  
+
+            int [] appleNumbers = new int [friendCount];
+            
+            for (int index = 0; index < friendCount; index++)
+            {
+                Console.Write(index + 1);
+                Console.Write("번째 친구가 가져\"갈\" 사과는 몇 개??? ");
+                appleNumbers[index] = int.Parse(Console.ReadLine());
+            }
+
+            for (int index = 0; index < friendCount; index++)
+            {
+                Console.Write(index + 1);
+                Console.Write("번째 친구가 가져\"간\" 사과는 몇 개??? ");
+                appleNumbers[index] = int.Parse(Console.ReadLine());
+            }
+        }
+    }
+}
