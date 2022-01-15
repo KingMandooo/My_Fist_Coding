@@ -11,11 +11,14 @@ namespace test_9_1
             int passcodeLength = 6;
             int[] userInput = new int[passcodeLength];
 
-            for (int passcodeWrong = 0; passcodeWrong < 5; passcodeWrong++ )
+            for (int passcodeWrong = 1; passcodeWrong < 6; passcodeWrong++ )
             {
+                Console.Write(passcodeWrong);
+                Console.WriteLine("번째 시도!!");
+
                 for (int passcodeIndex = 0; passcodeIndex < passcodeLength; passcodeIndex++)
                 {
-                    Console.Write(passcodeIndex);
+                    Console.Write(passcodeIndex + 1);
                     Console.WriteLine("번째 숫자를 넣어주세요.");
                     userInput[passcodeIndex] = int.Parse(Console.ReadLine());
                 }
@@ -36,6 +39,11 @@ namespace test_9_1
                 {
                     Console.WriteLine("문이 열렸습니다.");
                     break;
+                }
+              
+                if (passcodeWrong == 5)
+                {
+                    Console.WriteLine("5번의 기회가 끝났습니다. \"게임오버\"");
                 }
             }
         }
