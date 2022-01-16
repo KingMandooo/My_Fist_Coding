@@ -1,6 +1,6 @@
 using System;
 
-namespace test_9_2
+namespace test_9_2                                                   //첫 풀이과정
 {
     class Program
     {
