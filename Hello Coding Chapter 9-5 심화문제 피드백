@@ -1,0 +1,110 @@
+using System;
+
+namespace test_9_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double[] students = new  double[10];
+           
+            for(int classNumber = 0; classNumber < 5; classNumber++)
+            {
+                Console.Write("3학년 ");
+                Console.Write("\"");
+                Console.Write(classNumber + 1);
+                Console.WriteLine("\"반 학생들의 성적");
+
+                for(int studentNumber = 0; studentNumber < 10; studentNumber++)
+                {
+                    Console.Write(studentNumber + 1);
+                    Console.WriteLine("번 학생의 성적");
+                    students[studentNumber] = double.Parse(Console.ReadLine());
+                }
+              
+                Console.Write(classNumber + 1);
+                Console.Write("반 평균: ");
+                double counts = students[0] + students[1] + students[2] + students[3] + students[4] + students[5] + students[6] + students[7] + students[8] + students[9];
+                Console.WriteLine(counts / 10);
+                Console.WriteLine("");
+            }
+        }
+    }
+}
+
+-------------------------------------------------------------------------------나와 다른 풀이과정----------------------------------------------------------------------
+
+using System;
+
+namespace test_9_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int classCount = 5;
+            int studentCount = 10;
+            double[] classScores = new double[classCount];
+
+            for (int i = 0; i < classCount; i++)
+            {
+                Console.Write("3학년 ");
+                Console.Write(i + 1);
+                Console.WriteLine("반 성적을 입력합니다.");
+
+                for (int j = 0; j < studentCount; j++)
+                {
+                    Console.Write(j + 1);
+                    Console.WriteLine("번째 학생의 성적을 입력해주세요.");
+                    classScores[i] = classScores[i] + double.Parse(Console.ReadLine()); --> 이 부분이 이해가 잘 안되는 감이 있다. 왜 classScores[i]의 시작 값이 0일까?
+                }                                                                           0+입력한 점수 ,  (0+입력한 점수)+입력한 점수, (0+입력한 점수+입력한 점수)+입력한 점수
+            }                                                                               이런식으로 중첩이 돼서 classScores[i]에 반 학생의 성적의 합이 완성되는거다.
+ 
+                for(int i = 0; i < classCount; i++)
+                {
+                    Console.Write("3학년 ");
+                    Console.Write(i + 1);
+                    Console.Write("반의 평균: ");
+                    Console.WriteLine(classScores[i] / studentCount);
+                }
+            
+        }
+    }
+}
+---------------------------------------------------------------피드백 받고 고침-------------------------------------------------------------------------------
+
+using System;
+
+namespace test_9_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double[] students = new double[10];
+
+            for (int classNumber = 0; classNumber < 5; classNumber++)
+            {
+                Console.Write("3학년 ");
+                Console.Write("\"");
+                Console.Write(classNumber + 1);
+                Console.WriteLine("\"반 학생들의 성적");
+
+                for (int studentNumber = 0; studentNumber < 10; studentNumber++)
+                {
+                    Console.Write(studentNumber + 1);
+                    Console.WriteLine("번 학생의 성적");
+                    students[studentNumber] = students[studentNumber]+  double.Parse(Console.ReadLine());  <--- 이거 적용.
+                }
+            }
+           
+            for (int studentNumber = 0; studentNumber < 10; studentNumber++)
+            {
+                Console.Write("3학년 ");
+                Console.Write(studentNumber + 1);
+                Console.Write("반 학생들의 평균: ");
+                Console.WriteLine(students[studentNumber]/10);
+            }
+        }
+    }
+}
