@@ -1,5 +1,5 @@
     using System;
-namespace LottoNumberGenerator
+namespace LottoNumberGenerator                                       *아래 코딩 설명있음*
 
 {
     class Program
