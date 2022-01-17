@@ -1,0 +1,55 @@
+    using System;
+namespace LottoNumberGenerator
+
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int lottoLength = 6;
+            int[] lottoNumbers = new int[lottoLength];          //로또에서는 중복되는 숫자가 없어야 한다. 중복되는 숫자가 나오지 않을 때까지 돌아가는 프로그램이다.
+            
+            Random random = new Random();
+
+            int lottoNumberIndex = 0;
+            while (lottoNumberIndex < lottoLength)
+            {
+                lottoNumbers[lottoNumberIndex] = random.Next(1, 46);
+
+                bool hasDuplicate = false;                           //중복되는 숫자가 없어야 하므로 변수 hasDuplicate를 false로 지정해준다.
+                for (int i = 0; i < lottoNumberIndex; i++)
+                {
+                    if (lottoNumbers[lottoNumberIndex] == lottoNumbers[i])
+                    {
+                        hasDuplicate = true;     //중복되는 숫자가 하나라도 나오면 변수 hasDuplicate를 true로 바꿔준다.
+                        break;
+                    }
+                }
+
+                if (!hasDuplicate)
+                {
+                    lottoNumberIndex++;
+                }
+            }
+
+                Console.Write("로또 번호: ");
+                for (int i = 0;i < lottoLength;i++)
+                {
+                    Console.Write(lottoNumbers[i]);
+                    Console.Write(", ");
+                }
+                Console.WriteLine();
+            
+        }
+    }
+}
+------------------------------------------------------------------프로그램 설명-----------------------------------------------------------------------------------
+lottoNumbers[lottoNumberIndex]가 lottoNumbers[0]이면 for문의 조건식과 일치하지 않으므로 바로 29번 줄의 if문이 실행된다.
+그 이후에는 lottoNumberIndex에 숫자가 더해지면서 22번줄의 반복문이 실행된다. 
+if절의 lottoNumbers[lottoNumberIndex] == lottoNumbers[i] 이 조건이 성립이 된다면 중복되는 숫자가 나오기 때문에 변수 
+hasDuplicate가 true로 바뀌고 break;가 실행되면서 while문이 다시 실행되어 lottoNumbers[lottoNumberIndex]의 변수를 다시 설정해준다.
+
+ex) lottoNumbers[lottoNumberIndex]에서 [lottoNumberIndex]가 0이면 22번의 조건문이 성립이 안되므로 29번 조건문이 실행.
+다시 17번의 랜덤문이 실행되고 [lottoNumberIndex]가 1이되었으므로 22번줄의 조건문이 실행 만약  lottoNumbers[0]과  lottoNumbers[1]이 같다면 if절이 실행된다. 
+그리고 다시 17번으로 돌아가서 lottoNumbers[1]을 다시 설정해줌. 만약  lottoNumbers[0]과  lottoNumbers[1]이 다르다면,
+29번줄이 실행되고 17번줄에서 lottoNumbers[2]가 다시 랜덤으로 숫자가 넣어짐.이거를 계속해서 반복해서 6개의 다른 숫자가 나올 때까지 프로그램이 돌아간다.
