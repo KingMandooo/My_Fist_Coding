@@ -49,7 +49,11 @@ lottoNumbers[lottoNumberIndex]가 lottoNumbers[0]이면 for문의 조건식과 �
 if절의 lottoNumbers[lottoNumberIndex] == lottoNumbers[i] 이 조건이 성립이 된다면 중복되는 숫자가 나오기 때문에 변수 
 hasDuplicate가 true로 바뀌고 break;가 실행되면서 while문이 다시 실행되어 lottoNumbers[lottoNumberIndex]의 변수를 다시 설정해준다.
 
-ex) lottoNumbers[lottoNumberIndex]에서 [lottoNumberIndex]가 0이면 22번의 조건문이 성립이 안되므로 29번 조건문이 실행.
-다시 17번의 랜덤문이 실행되고 [lottoNumberIndex]가 1이되었으므로 22번줄의 조건문이 실행 만약  lottoNumbers[0]과  lottoNumbers[1]이 같다면 if절이 실행된다. 
-그리고 다시 17번으로 돌아가서 lottoNumbers[1]을 다시 설정해줌. 만약  lottoNumbers[0]과  lottoNumbers[1]이 다르다면,
-29번줄이 실행되고 17번줄에서 lottoNumbers[2]가 다시 랜덤으로 숫자가 넣어짐.이거를 계속해서 반복해서 6개의 다른 숫자가 나올 때까지 프로그램이 돌아간다.
+ex) lottoNumbers[lottoNumberIndex]에서 [lottoNumberIndex]가 0이면 22번 줄의 조건문이 성립이 안되므로 29번 조건문이 실행.
+다시 17번 줄의 랜덤문이 실행되고 [lottoNumberIndex]가 1이되었으므로 22번 줄의 조건문이 실행 만약  lottoNumbers[0]과  lottoNumbers[1]이 같다면 if절이 실행된다. 
+그리고 다시 17번 줄로 돌아가서 lottoNumbers[1]을 다시 설정해줌. 만약  lottoNumbers[0]과  lottoNumbers[1]이 다르다면,
+29번줄이 실행되고 17번 줄에서 lottoNumbers[2]가 다시 랜덤으로 숫자가 넣어짐. 
+그리고 20번 줄의 for문이 성립하므로 22번 줄의 if문에서 lottoNumbers[0]과 lottoNumbers[2]가 같은지 확인하고, lottoNumbers[1]과 lottoNumbers[2]가 같은지 확인한다.
+만약 같다면 다시 17번 줄로 돌아가서 lottoNumbers[2]에 숫자를 다시 넣어준다. 만약 다르다면 29번 줄의 if문을 실행시키고 다시 17번 줄에서 lottoNumbers[3]의 값을 정해준다.
+이거를 계속해서 반복해서 6개의 다른 숫자가 나올 때까지 프로그램이 돌아간다.
+마지막 36번 줄의 if문에서는 서로 다른 숫자가 입력된 lottoNumbers[0], lottoNumbers[1], lottoNumbers[2], lottoNumbers[3], lottoNumbers[4], lottoNumbers[5]를 출력한다.
