@@ -1,0 +1,51 @@
+using System;
+
+namespace test_10_2
+{
+    class Program                                                                                          
+    {                                                                                                      ex)  더 있음
+        static void Main(string[] args)               // 이겼을 때: -2, 1  졌을 때: -1, 2, 비겼을 때: 0  --> 가위(1) - 보(3) = -2 ,    바위(2) - 가위(1) = 1
+        {                                                                                                  바위(2) - 보(3) = -1 ,    보(3) - 가위(1) = -2
+           Random random = new Random();                                                                   가위(1) - 가위(1) = 0 ,   바위(2) - 바위(2) = 0 
+            int game = random.Next(1, 4);                                                 
+
+            Console.WriteLine("가위(1), 바위(2), 보(3)중 하나를 입력하세요.");
+           
+            while (true)
+            {
+                int myhand = int.Parse(Console.ReadLine());
+                if (myhand >= 1 && myhand <= 3)
+                {
+                    int result = myhand - game;
+
+                    if (result == 1 || result == -2)
+                    {
+                        Console.WriteLine("이겼당 ^3^");
+                        break;
+                    }
+
+
+                    else if (result == -1 || result == 2)
+                    {
+                        Console.WriteLine("졌당 ㅜㅡㅜ");
+                        break;
+                    }
+
+
+                    else if (result - result == 0)
+                    {
+                        Console.WriteLine("비겼당 -_-;");
+                        continue;
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("올바른 숫자가 아니에요");
+                    continue ;
+                }
+                
+            }
+        }
+    }
+}
