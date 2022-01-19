@@ -1,0 +1,64 @@
+using System;
+
+namespace test_10_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           Random random = new Random();
+            int game = random.Next(1, 4);
+
+            while(true)
+            {
+                int myhand = int.Parse(Console.ReadLine());
+
+                if (myhand ==1 && game == 2)
+                {
+                    Console.WriteLine("짐");
+                    break;
+                }
+
+                else if (myhand == 1 && game == 3)
+                {
+                    Console.WriteLine("이김");
+                    break;
+                }
+
+                else if (myhand == 2 && game == 1)
+                {
+                    Console.WriteLine("이김");
+                    break;
+                }
+
+                else if (myhand == 2 && game == 3)
+                {
+                    Console.WriteLine("짐");
+                    break;
+                }
+
+                else if (myhand == 3 && game == 1)
+                {
+                    Console.WriteLine("짐");
+                    break;
+                }
+
+                else if (myhand == 3 && game == 2)
+                {
+                    Console.WriteLine("이김");
+                    break;
+                }
+
+                else if(myhand == game)
+                {
+                    Console.WriteLine("비겼습니다.");
+                }
+
+                else if (myhand <= 0 || myhand > 3 )         <--- else if (myhand <= 0 && myhand > 3 )  이렇게 했었는데 생각해보니 0 이하와 3을 초과하는걸 동시에 할 수 없었다.
+                {                                                 따라서 논리곱연산자(&&)가 아니라 논리합연산자(||)를 써줘야 했다.
+                    Console.WriteLine("1,2,3만 입력");
+                }
+            }
+        }
+    }
+}
