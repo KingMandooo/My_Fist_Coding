@@ -32,7 +32,7 @@ namespace test_10_2
                     }
 
 
-                    else if (result - result == 0)
+                    else if (result - result == 0)                     <-- 여기서 else if 말고 else를 사용하던데, else if를 쓰면 오는 페널티가 있을까..? 
                     {
                         Console.WriteLine("비겼당 -_-;");
                         continue;
