@@ -1,0 +1,38 @@
+using System;
+
+namespace test_10_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+            int dfnumbers = random.Next(1, 101);
+
+            int numbers = 5;
+           
+            int index = 0;
+            while (true )
+            {
+                Console.WriteLine("숫자를 입력하시오.");
+                int fwnumbers = int.Parse(Console.ReadLine());
+
+                if (fwnumbers > dfnumbers)
+                {
+                    Console.WriteLine("더 큰 숫자다요.");                    
+                }
+             
+                else if (fwnumbers < dfnumbers)
+                {
+                    Console.WriteLine("더 작은 숫자다요.");
+                }
+
+                else 
+                {
+                    Console.WriteLine("정답이다요.");
+                    break;
+                }
+            }
+        }
+    }
+}
